@@ -13,7 +13,7 @@ namespace EasyAbp.EShop.Stores.StoreOwners
 
         public virtual Guid OwnerUserId { get; protected set; }
 
-        protected StoreOwner()
+        public StoreOwner()
         {
         }
 

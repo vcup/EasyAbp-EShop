@@ -1,19 +1,17 @@
 using System;
-using AutoMapper;
 using Volo.Abp.Domain.Entities;
 
 namespace EasyAbp.EShop.Payments.Refunds
 {
-    [AutoMap(typeof(RefundItemOrderLineEto))]
     public class RefundItemOrderLine : Entity<Guid>
     {
-        public virtual Guid OrderLineId { get; protected set; }
-        
-        public virtual int RefundedQuantity { get; protected set; }
-        
-        public virtual decimal RefundAmount { get; protected set; }
+        public virtual Guid OrderLineId { get; set; }
 
-        protected RefundItemOrderLine()
+        public virtual int RefundedQuantity { get; set; }
+
+        public virtual decimal RefundAmount { get; set; }
+
+        public RefundItemOrderLine()
         {
         }
 

@@ -21,7 +21,7 @@ public class FlashSalePlan : FullAuditedAggregateRoot<Guid>, IMultiTenant, IMult
 
     public virtual bool IsPublished { get; protected set; }
 
-    protected FlashSalePlan()
+    public FlashSalePlan()
     {
     }
 

@@ -43,7 +43,7 @@ namespace EasyAbp.EShop.Payments.Refunds
         IEnumerable<IRefundItem> IRefund.RefundItems => RefundItems;
         public virtual List<RefundItem> RefundItems { get; protected set; }
 
-        protected Refund()
+        public Refund()
         {
         }
 

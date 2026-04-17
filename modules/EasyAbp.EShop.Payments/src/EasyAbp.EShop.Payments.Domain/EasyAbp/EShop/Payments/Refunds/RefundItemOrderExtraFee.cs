@@ -1,25 +1,23 @@
 using System;
-using AutoMapper;
 using JetBrains.Annotations;
 using Volo.Abp.Domain.Entities;
 
 namespace EasyAbp.EShop.Payments.Refunds
 {
-    [AutoMap(typeof(RefundItemOrderExtraFeeEto))]
     public class RefundItemOrderExtraFee : Entity<Guid>
     {
         [NotNull]
-        public virtual string Name { get; protected set; }
+        public virtual string Name { get; set; }
 
         [CanBeNull]
-        public virtual string Key { get; protected set; }
+        public virtual string Key { get; set; }
 
         [CanBeNull]
-        public virtual string DisplayName { get; protected set; }
+        public virtual string DisplayName { get; set; }
 
-        public virtual decimal RefundAmount { get; protected set; }
+        public virtual decimal RefundAmount { get; set; }
 
-        protected RefundItemOrderExtraFee()
+        public RefundItemOrderExtraFee()
         {
         }
 

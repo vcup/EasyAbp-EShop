@@ -23,7 +23,7 @@ public class GrantedStore : AuditedAggregateRoot<Guid>, IMultiTenant
     /// </summary>
     public virtual bool AllowAll { get; protected set; }
 
-    protected GrantedStore()
+    public GrantedStore()
     {
     }
 

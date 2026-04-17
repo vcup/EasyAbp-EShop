@@ -20,7 +20,7 @@ namespace EasyAbp.EShop.Products.Products
         IEnumerable<IProductAttributeOption> IProductAttribute.ProductAttributeOptions => ProductAttributeOptions;
         public virtual List<ProductAttributeOption> ProductAttributeOptions { get; protected set; }
 
-        protected ProductAttribute()
+        public ProductAttribute()
         {
             ExtraProperties = new ExtraPropertyDictionary();
             this.SetDefaultsForExtraProperties(ProxyHelper.UnProxy(this).GetType());

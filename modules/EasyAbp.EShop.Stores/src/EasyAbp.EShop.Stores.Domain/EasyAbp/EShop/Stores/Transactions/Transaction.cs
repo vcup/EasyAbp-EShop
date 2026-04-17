@@ -23,7 +23,7 @@ namespace EasyAbp.EShop.Stores.Transactions
         
         public virtual decimal Amount { get; protected set; }
 
-        protected Transaction()
+        public Transaction()
         {
         }
 

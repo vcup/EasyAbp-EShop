@@ -24,10 +24,10 @@ namespace EasyAbp.EShop.Plugins.Coupons.CouponTemplates
         /// </summary>
         public virtual Guid? ProductSkuId { get; protected set; }
 
-        protected CouponTemplateScope()
+        public CouponTemplateScope()
         {
         }
-        
+
         public CouponTemplateScope(
             Guid id,
             Guid storeId,

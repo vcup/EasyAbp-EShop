@@ -22,7 +22,7 @@ namespace EasyAbp.EShop.Plugins.Coupons.Coupons
         
         public virtual string Currency { get; protected set; }
 
-        protected Coupon()
+        public Coupon()
         {
         }
 

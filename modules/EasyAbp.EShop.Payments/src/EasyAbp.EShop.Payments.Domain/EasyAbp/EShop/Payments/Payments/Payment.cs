@@ -46,7 +46,7 @@ namespace EasyAbp.EShop.Payments.Payments
 
         #endregion
 
-        protected Payment()
+        public Payment()
         {
         }
 

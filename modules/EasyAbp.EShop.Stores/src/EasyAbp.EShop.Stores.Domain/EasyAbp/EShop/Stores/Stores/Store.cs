@@ -14,7 +14,7 @@ namespace EasyAbp.EShop.Stores.Stores
         
         // Todo: more properties.
         
-        protected Store() {}
+        public Store() { }
 
         public Store(
             Guid id,

@@ -14,7 +14,7 @@ namespace EasyAbp.EShop.Products.ProductDetails
         [CanBeNull]
         public virtual string Description { get; protected set; }
 
-        protected ProductDetail() {}
+        public ProductDetail() { }
         
         public ProductDetail(
             Guid id,
