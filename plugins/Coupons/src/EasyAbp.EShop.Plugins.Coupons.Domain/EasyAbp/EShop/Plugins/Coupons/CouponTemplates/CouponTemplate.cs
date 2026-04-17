@@ -55,7 +55,7 @@ namespace EasyAbp.EShop.Plugins.Coupons.CouponTemplates
         IEnumerable<ICouponTemplateScope> ICouponTemplate.Scopes => Scopes;
         public virtual List<CouponTemplateScope> Scopes { get; protected set; }
 
-        protected CouponTemplate()
+        public CouponTemplate()
         {
             Scopes = new List<CouponTemplateScope>();
         }

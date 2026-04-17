@@ -16,7 +16,7 @@ namespace EasyAbp.EShop.Products.Products
 
         public ExtraPropertyDictionary ExtraProperties { get; protected set; }
 
-        protected ProductAttributeOption()
+        public ProductAttributeOption()
         {
             ExtraProperties = new ExtraPropertyDictionary();
             this.SetDefaultsForExtraProperties(ProxyHelper.UnProxy(this).GetType());

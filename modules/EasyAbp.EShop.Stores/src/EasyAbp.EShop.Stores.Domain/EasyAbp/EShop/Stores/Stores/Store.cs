@@ -7,14 +7,16 @@ namespace EasyAbp.EShop.Stores.Stores
 {
     public class Store : FullAuditedAggregateRoot<Guid>, IMultiTenant
     {
-        public virtual Guid? TenantId { get; protected set; }
-        
-        [NotNull]
-        public virtual string Name { get; protected set; }
-        
+        public virtual Guid? TenantId { get; set; }
+
+        [NotNull] 
+        public virtual string Name { get; set; }
+
         // Todo: more properties.
-        
-        protected Store() {}
+
+        public Store()
+        {
+        }
 
         public Store(
             Guid id,

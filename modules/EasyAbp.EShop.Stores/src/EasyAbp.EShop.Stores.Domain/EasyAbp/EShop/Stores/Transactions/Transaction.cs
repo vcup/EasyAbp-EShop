@@ -7,23 +7,23 @@ namespace EasyAbp.EShop.Stores.Transactions
 {
     public class Transaction : CreationAuditedAggregateRoot<Guid>, IMultiTenant
     {
-        public virtual Guid? TenantId { get; protected set; }
+        public virtual Guid? TenantId { get; set; }
         
-        public virtual Guid StoreId { get; protected set; }
+        public virtual Guid StoreId { get; set; }
         
-        public virtual Guid? OrderId { get; protected set; }
+        public virtual Guid? OrderId { get; set; }
 
-        public virtual TransactionType TransactionType { get; protected set; }
+        public virtual TransactionType TransactionType { get; set; }
         
         [NotNull]
-        public virtual string ActionName { get; protected set; }
+        public virtual string ActionName { get; set; }
         
         [NotNull]
-        public virtual string Currency { get; protected set; }
+        public virtual string Currency { get; set; }
         
-        public virtual decimal Amount { get; protected set; }
+        public virtual decimal Amount { get; set; }
 
-        protected Transaction()
+        public Transaction()
         {
         }
 

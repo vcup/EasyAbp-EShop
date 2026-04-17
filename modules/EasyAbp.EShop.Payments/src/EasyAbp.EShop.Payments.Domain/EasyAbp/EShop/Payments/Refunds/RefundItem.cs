@@ -32,7 +32,7 @@ namespace EasyAbp.EShop.Payments.Refunds
 
         public virtual List<RefundItemOrderExtraFee> OrderExtraFees { get; protected set; }
 
-        protected RefundItem()
+        public RefundItem()
         {
             OrderLines = new List<RefundItemOrderLine>();
             OrderExtraFees = new List<RefundItemOrderExtraFee>();

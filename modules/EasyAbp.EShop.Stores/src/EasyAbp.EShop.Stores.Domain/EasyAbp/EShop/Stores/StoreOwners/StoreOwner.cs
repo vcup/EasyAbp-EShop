@@ -7,13 +7,13 @@ namespace EasyAbp.EShop.Stores.StoreOwners
 {
     public class StoreOwner : AuditedAggregateRoot<Guid>, IMultiStore, IMultiTenant
     {
-        public virtual Guid? TenantId { get; protected set; }
+        public virtual Guid? TenantId { get; set; }
 
-        public virtual Guid StoreId { get; protected set; }
+        public virtual Guid StoreId { get; set; }
 
-        public virtual Guid OwnerUserId { get; protected set; }
+        public virtual Guid OwnerUserId { get; set; }
 
-        protected StoreOwner()
+        public StoreOwner()
         {
         }
 

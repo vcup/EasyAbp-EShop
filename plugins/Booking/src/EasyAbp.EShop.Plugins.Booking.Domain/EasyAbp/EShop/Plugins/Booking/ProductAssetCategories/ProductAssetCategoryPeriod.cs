@@ -13,7 +13,7 @@ public class ProductAssetCategoryPeriod : Entity<Guid>
 
     public virtual decimal Price { get; protected set; }
 
-    protected ProductAssetCategoryPeriod()
+    public ProductAssetCategoryPeriod()
     {
     }
 

@@ -38,7 +38,7 @@ namespace EasyAbp.EShop.Payments.Payments
             StoreId = storeId;
         }
 
-        protected PaymentItem()
+        public PaymentItem()
         {
             ExtraProperties = new ExtraPropertyDictionary();
             this.SetDefaultsForExtraProperties(ProxyHelper.UnProxy(this).GetType());
