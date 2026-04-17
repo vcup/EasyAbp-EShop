@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using Volo.Abp.AutoMapper;
 using Volo.Abp.Http.Client;
+using Volo.Abp.Mapperly;
 using Volo.Abp.Modularity;
 using Volo.Abp.VirtualFileSystem;
 
@@ -9,7 +9,7 @@ namespace EasyAbp.EShop.Plugins.Coupons
     [DependsOn(
         typeof(EShopPluginsCouponsApplicationContractsModule),
         typeof(AbpHttpClientModule),
-        typeof(AbpAutoMapperModule)
+        typeof(AbpMapperlyModule)
     )]
     public class EShopPluginsCouponsHttpApiClientModule : AbpModule
     {
@@ -17,17 +17,13 @@ namespace EasyAbp.EShop.Plugins.Coupons
 
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
-            context.Services.AddAutoMapperObjectMapper<EShopPluginsCouponsHttpApiClientModule>();
-            Configure<AbpAutoMapperOptions>(options =>
-            {
-                options.AddMaps<EShopPluginsCouponsHttpApiClientModule>(validate: true);
-            });
-            
+            context.Services.AddMapperlyObjectMapper<EShopPluginsCouponsHttpApiClientModule>();
+
             context.Services.AddHttpClientProxies(
                 typeof(EShopPluginsCouponsApplicationContractsModule).Assembly,
                 RemoteServiceName
             );
-            
+
             Configure<AbpVirtualFileSystemOptions>(options =>
             {
                 options.FileSets.AddEmbedded<EShopPluginsCouponsApplicationContractsModule>();

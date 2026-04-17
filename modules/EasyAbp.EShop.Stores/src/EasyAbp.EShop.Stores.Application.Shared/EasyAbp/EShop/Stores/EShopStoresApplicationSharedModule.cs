@@ -2,15 +2,13 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.Application;
-using Volo.Abp.AutoMapper;
 using Volo.Abp.Modularity;
 
 namespace EasyAbp.EShop.Stores
 {
     [DependsOn(
         typeof(EShopStoresDomainSharedModule),
-        typeof(AbpDddApplicationModule),
-        typeof(AbpAutoMapperModule)
+        typeof(AbpDddApplicationModule)
     )]
     public class EShopStoresApplicationSharedModule : AbpModule
     {
